@@ -6,7 +6,7 @@ import { AuroraBackground, Boxes } from "../acternity/AnimatedBackground";
 
 export default function Whoami() {
     return (
-        <div id="whoami">
+        <div>
             <AuroraBackground className="flex space-y-32">
                 <motion.div
                     initial={{ opacity: 0.0, y: 40 }}
@@ -31,7 +31,7 @@ export default function Whoami() {
                     </button>
                 </motion.div>
             </AuroraBackground>
-            <div className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
+            <div id="whoami" className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
                 <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
                     <Boxes />
                 <div className="flex flex-col justify-around space-x-12 items-center sm:flex-row">

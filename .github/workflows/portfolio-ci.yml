@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write  # 🔥 Ajoute cette ligne pour autoriser l'écriture sur le repo
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -26,11 +29,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/MAILLOTNathan/portfolio.git
-          git fetch origin gh-pages || git checkout --orphan gh-pages
-          git add -f build
-          git commit -m "Deploy React App 🚀"
-          git push -f origin gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build  # Assure-toi que c'est "build" et pas autre chose

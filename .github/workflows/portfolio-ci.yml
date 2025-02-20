@@ -33,7 +33,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build
-        run: npm build
+        run: npm run build
 
       - name: Launch
         run: serve -S build

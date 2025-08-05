@@ -10,9 +10,12 @@ export default function Parcours() {
                 Développeur Full Stack chez ROSS (Retail Optimization Software Solutions) au Port (La Réunion)
             </p>
             <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                Mon travail n'a pas encore commencé, mais j'ai hate de vous en dire plus !
+                Durant 4 mois, j'ai eu l'opportunité de travailler en tant que développeur full stack dans une entreprise spécialisée dans les solutions logicielles pour le secteur du retail.
+                J'ai pu mettre en pratique mes compétences en développement web, en travaillant sur outil concret utilisé par E.Leclerc Réunion, dans un domaine hyper intéressant qu'est la gestion de grandes surfaces.
+                J'ai appris à travailler avec une petite équipe de développeurs, à documenter à un niveau professionnel, mais surtout à comprendre les enjeux et les défis très spêcifique d'un secteur de pointe.
             </p>
             <div className="grid grid-cols-2 gap-4">
+              <img src="ross.png" alt="ROSS" className="rounded-lg"/>
             </div>
           </div>
         ),

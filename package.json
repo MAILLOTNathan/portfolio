@@ -12,7 +12,8 @@
     "format:check": "prettier . --check",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "start:port": "PORT=4000 react-scripts start"
   },
   "browserslist": {
     "production": [

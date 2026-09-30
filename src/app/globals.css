@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-white text-neutral-900 antialiased dark:bg-black dark:text-neutral-100;
+  }
+
+  /* Keep anchored sections clear of the fixed navbar. */
+  section[id],
+  div[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  ::selection {
+    @apply bg-purple-500/30;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  /* Shared page gutter, so every section lines up on the same grid. */
+  .section-container {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  /* Small uppercase label displayed above a section title. `w-fit` keeps it
+     hugging its text when the parent is a stretched flex container. */
+  .section-eyebrow {
+    @apply mb-3 inline-flex w-fit items-center gap-2 rounded-full border border-neutral-200 bg-white/60 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-neutral-500 backdrop-blur dark:border-white/10 dark:bg-white/5 dark:text-neutral-400;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl;
+  }
+
+  .section-lead {
+    @apply mt-4 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base;
+  }
+
+  /* Frosted card used across the different sections. */
+  .card-surface {
+    @apply rounded-2xl border border-neutral-200 bg-white/70 backdrop-blur transition-colors dark:border-white/10 dark:bg-white/[0.03];
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan-400 via-purple-400 to-fuchsia-500 bg-clip-text text-transparent;
+  }
+
+  /* Thin, theme aware scrollbar. */
+  .scrollbar-slim {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(163 163 163 / 0.5) transparent;
+  }
+}

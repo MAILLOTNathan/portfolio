@@ -1,0 +1,167 @@
+{
+  "experiences": [
+    {
+      "id": "preskater",
+      "period": "Juillet 2025 - Aujourd'hui",
+      "role": "Président & Développeur Full Stack",
+      "organization": "Preskater",
+      "location": "Full Remote",
+      "type": "Entreprenariat",
+      "description": [
+        "J'ai co-fondé Preskater, une entreprise de prestations de services en informatique, avec 5 autres amis développeurs.",
+        "Nous avons pour objectif de proposer des services de qualité, en mettant l'accent sur la satisfaction client et la qualité du code.",
+        "Nous avons déjà réalisé plusieurs projets pour des clients, et nous continuons à développer notre entreprise.",
+        "Je suis en charge de la partie recherche et développement, ainsi que de la gestion de l'équipe de développeurs."
+      ],
+      "tags": [
+        "Entreprenariat",
+        "Développement web",
+        "Gestion d'équipe",
+        "R&D",
+        "AR/VR"
+      ],
+      "images": [
+        {
+          "src": "/images/preskater.png",
+          "alt": "Logo de Preskater",
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "id": "codialis",
+      "period": "Septembre 2026 - Février 2027",
+      "role": "Développeur Full Stack",
+      "organization": "Codialis",
+      "location": "Part Time (21h / semaine)",
+      "type": "Stage",
+      "description": [
+        "J'ai eu l'opportunité de travailler chez Codialis, une entreprise spécialisée dans le développement de solutions logicielles.",
+        "J'ai principalement travaillé sur le développement d'un jeux vidéo mobile, en utilisant Unity et C#.",
+        "J'ai pu mettre en pratique mes compétences en développement web et mobile, mais aussi apprendre de nouvelles technologies et méthodologies de travail.",
+        "J'ai également participé à la conception et à l'implémentation de nouvelles fonctionnalités, ainsi qu'à la résolution de bugs et à l'optimisation du code existant."
+      ],
+      "tags": ["Full Stack", "Développement web", "Jeux vidéo", "Mobile"],
+      "images": [
+        {
+          "src": "/images/codialis.png",
+          "alt": "Logo de Codialis",
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "id": "ross",
+      "period": "Avril 2025 - Août 2025",
+      "role": "Développeur Full Stack",
+      "organization": "ROSS (Retail Optimization Software Solutions)",
+      "location": "Le Port, La Réunion",
+      "type": "Stage",
+      "description": [
+        "Durant 4 mois, j'ai eu l'opportunité de travailler en tant que développeur full stack dans une entreprise spécialisée dans les solutions logicielles pour le secteur du retail.",
+        "J'ai pu mettre en pratique mes compétences en développement web, en travaillant sur un outil concret utilisé par E.Leclerc Réunion, dans un domaine hyper intéressant qu'est la gestion de grandes surfaces.",
+        "J'ai appris à travailler avec une petite équipe de développeurs, à documenter à un niveau professionnel, mais surtout à comprendre les enjeux et les défis très spécifiques d'un secteur de pointe."
+      ],
+      "tags": ["Full Stack", "Développement web", "Documentation"],
+      "images": [
+        {
+          "src": "/images/ross.png",
+          "alt": "L'équipe de ROSS",
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "id": "aer-epitech",
+      "period": "Septembre 2024 - Mars 2025",
+      "role": "Assistant Epitech en Région (AER)",
+      "organization": "Epitech Saint-André",
+      "location": "Saint-André, La Réunion",
+      "type": "Temps partiel (14h / semaine)",
+      "description": [
+        "Mon travail consiste à aider les étudiants de première année à s'adapter à la pédagogie de l'école Epitech.",
+        "Je fais principalement de l'écoute, mais je fais aussi passer des soutenances de projet et des revues de code.",
+        "La plus grosse difficulté, c'est d'adapter son discours à chaque étudiant, car chacun a son propre rythme d'apprentissage.",
+        "Le plus gratifiant, c'est de voir les étudiants progresser, devenir autonomes, mais surtout de voir qu'ils peuvent nous surpasser."
+      ],
+      "tags": ["Pédagogie", "Revue de code", "Soutenances"],
+      "images": [
+        {
+          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREJdGvuZyOwkLZ6kKvqjBv-Ejnsl_TUjGi7A&s",
+          "alt": "Epitech",
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "id": "bde-epitech",
+      "period": "Janvier 2024 - Mars 2025",
+      "role": "Président du Bureau Des Étudiants (BDE)",
+      "organization": "Epitech Saint-André",
+      "location": "Saint-André, La Réunion",
+      "type": "Associatif",
+      "description": [
+        "Mon travail consiste à organiser des évènements pour les étudiants de l'école, à gérer le budget du BDE et à représenter les étudiants auprès de l'administration.",
+        "Avec mon équipe, nous avons organisé le WEI (Week-End d'Intégration) de l'école, une journée jeux vidéo, une soirée raclette, une sortie karting, et bien d'autres évènements.",
+        "Le plus difficile, c'est de gérer toute la partie administrative et le calendrier tout en assurant sa scolarité en parallèle.",
+        "Mais c'est tout de même une fierté de voir les étudiants s'amuser, se détendre, et de voir qu'ils apprécient les évènements que nous organisons."
+      ],
+      "tags": ["Gestion d'équipe", "Évènementiel", "Budget"],
+      "images": [
+        {
+          "src": "/images/bde.png",
+          "alt": "Le BDE d'Epitech Saint-André",
+          "fit": "contain"
+        }
+      ]
+    },
+    {
+      "id": "tutteo",
+      "period": "Juillet 2023 - Décembre 2023",
+      "role": "Stagiaire Développeur Métier",
+      "organization": "Tutteo",
+      "location": "Télétravail complet",
+      "type": "Stage",
+      "description": [
+        "J'avais pour mission de migrer toute la partie tests fonctionnels, qui était assez ancienne.",
+        "Je devais aussi ajouter quelques petites fonctionnalités, telle que la possibilité d'afficher les doigtés des instruments à cuivre.",
+        "C'était une expérience sans pareille, car j'ai intégré une équipe en télétravail complet, dont les membres habitaient aux quatre coins du monde.",
+        "Le niveau d'exigence était très élevé, mais j'ai appris énormément de choses et j'ai pu apporter ma pierre à l'édifice."
+      ],
+      "tags": ["Tests fonctionnels", "Migration", "Télétravail"],
+      "images": [
+        {
+          "src": "https://blog.flat.io/content/images/2022/01/Tutteo-Blog-Cover.png",
+          "alt": "Tutteo",
+          "fit": "contain"
+        },
+        {
+          "src": "https://blog.flat.io/content/images/size/w2000/2023/10/IMG_3291_edited-1.jpg",
+          "alt": "Séminaire Tutteo 2023"
+        }
+      ]
+    },
+    {
+      "id": "epitech",
+      "period": "Septembre 2022",
+      "role": "Entrée à l'école Epitech",
+      "organization": "Epitech Saint-André",
+      "location": "Saint-André, La Réunion",
+      "type": "Formation",
+      "description": [
+        "Une nouvelle aventure commence pour moi : l'école Epitech est une école d'informatique qui a une pédagogie par projet.",
+        "C'est-à-dire que nous apprenons en faisant, en réalisant des projets et en travaillant en groupe.",
+        "C'est une méthode qui me convient parfaitement, car j'apprends mieux en pratiquant.",
+        "J'ai pu découvrir de nouveaux langages de programmation, de nouvelles technologies, et surtout rencontrer des personnes formidables."
+      ],
+      "tags": ["Pédagogie par projet", "Travail en équipe"],
+      "images": [
+        {
+          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREJdGvuZyOwkLZ6kKvqjBv-Ejnsl_TUjGi7A&s",
+          "alt": "Epitech",
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}

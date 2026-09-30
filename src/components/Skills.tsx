@@ -1,53 +1,115 @@
-import Chart from "react-apexcharts";
+"use client";
+
+import { motion } from "motion/react";
+
+import SectionHeader from "@/components/SectionHeader";
+import { hardSkills, softSkills, type Skill } from "@/data/skills";
+import { cn } from "@/lib/utils";
+
+type SkillBarProps = {
+  skill: Skill;
+  gradient: string;
+  /** Used to stagger the animation of the bars inside a group. */
+  index: number;
+};
+
+function SkillBar({ skill, gradient, index }: SkillBarProps) {
+  return (
+    <div>
+      <div className="flex items-baseline justify-between gap-3">
+        <span className="flex items-center gap-2 text-sm text-neutral-700 dark:text-neutral-200">
+          <span
+            aria-hidden="true"
+            style={{ backgroundColor: skill.color }}
+            className="h-2 w-2 shrink-0 rounded-full ring-1 ring-black/20 dark:ring-white/25"
+          />
+          {skill.name}
+        </span>
+        <span className="shrink-0 text-xs tabular-nums text-neutral-400 dark:text-neutral-500">
+          {skill.level}%
+        </span>
+      </div>
+
+      <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-neutral-200/80 dark:bg-white/10">
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: `${skill.level}%` }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{
+            duration: 0.9,
+            delay: index * 0.06,
+            ease: "easeOut",
+          }}
+          className={cn("h-full rounded-full bg-gradient-to-r", gradient)}
+        />
+      </div>
+    </div>
+  );
+}
 
 export default function Skills() {
-    const hardSkills = {
-        options: {
-          chart: {
-            id: 'skills-chart'
-          },
-          labels: ['JavaScript', 'TypeScript', 'React', 'Node.js', 'Rust', 'C/C++', 'Next.js', 'Python', 'Kubernetes', 'Docker', 'CI/CD', 'Git', 'Jenkins', 'Ansible', 'React Native', 'Haskell'],
-          colors: ['#F7DF1E', '#007ACC', '#61DAFB', '#8CC84B', '#DEA584', '#00599C', '#000000', '#3776AB', '#326CE5', '#0DB7ED', '#E24329', '#F05032', '#D33833', '#EE0000', '#61DAFB', '#5D4F85'],
-          legend: {
-              position: 'bottom' as 'bottom'
-          }
-        },
-        series: [90, 90, 90, 90, 50, 100, 80, 100, 70, 85, 80, 90, 70, 80, 90, 90],
-    };
-    const softSkills = {
-        options: {
-          chart: {
-            id: 'skills-chart'
-          },
-          labels: ['Communication', 'Teamwork', 'Problem Solving', 'Time Management', 'Leadership', 'Adaptability', 'Creativity', 'Critical Thinking', 'Conflict Resolution', 'Decision Making'],
-          colors: ['#F7DF1E', '#007ACC', '#61DAFB', '#8CC84B', '#DEA584', '#00599C', '#000000', '#3776AB', '#326CE5', '#0DB7ED'],
-          legend: {
-              position: 'bottom' as 'bottom'
-          }
-        },
-        series: [90, 100, 90, 80, 100, 100, 60, 80, 70, 85],
-    };
+  return (
+    <section id="skills" className="section-container py-20 sm:py-28">
+      <SectionHeader
+        eyebrow="Compétences"
+        title="Mes compétences"
+        lead="Un aperçu de mes compétences techniques, groupées par domaine, et de mon savoir-être."
+      />
 
-    return (
-        <div id="skills" className="flex flex-col justify-center space-y-8 mx-auto py-32 bg-white dark:bg-black text-black dark:text-white w-screen">
-            <span className="bg-white border rounded-xl w-[80%] mx-auto">
-                <h1 className="text-3xl font-bold text-center text-black pt-8">
-                    Mes Compétences Techniques
-                </h1>
-                <p className="text-center text-sm font-light p-8 text-black pb-8">
-                    Voici un aperçu bref de mes compétences techniques.
-                </p>
-                <Chart options={hardSkills.options} series={hardSkills.series} type="pie" width="100%" height="100%" />
+      <div className="mt-12 grid gap-6 lg:grid-cols-2">
+        {hardSkills.map((category) => (
+          <article
+            key={category.title}
+            className="card-surface flex flex-col p-6 transition hover:border-neutral-300 dark:hover:border-white/20 sm:p-7"
+          >
+            <span className="text-2xl" aria-hidden="true">
+              {category.icon}
             </span>
-            <span className="bg-white border rounded-xl w-[80%] mx-auto">
-                <h1 className="text-3xl font-bold text-center text-black pt-8">
-                    Mes Compétences Transversales
-                </h1>
-                <p className="text-center text-sm font-light p-8 text-black pb-8">
-                    Voici un peu mon savoir-être.
-                </p>
-                <Chart options={softSkills.options} series={softSkills.series} type="pie" width="100%" height="100%" />
-            </span>
+            <h3 className="mt-3 text-lg font-semibold tracking-tight">
+              {category.title}
+            </h3>
+            <p className="mt-1.5 text-sm leading-relaxed text-neutral-500 dark:text-neutral-400">
+              {category.description}
+            </p>
+
+            <div className="mt-6 space-y-4">
+              {category.skills.map((skill, index) => (
+                <SkillBar
+                  key={skill.name}
+                  skill={skill}
+                  gradient={category.gradient}
+                  index={index}
+                />
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <article className="card-surface mt-6 p-6 sm:p-8">
+        <div className="flex flex-wrap items-center gap-3">
+          <span className="text-2xl" aria-hidden="true">
+            {softSkills.icon}
+          </span>
+          <h3 className="text-lg font-semibold tracking-tight">
+            {softSkills.title}
+          </h3>
         </div>
-    );
+        <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-neutral-500 dark:text-neutral-400">
+          {softSkills.description}
+        </p>
+
+        <div className="mt-7 grid gap-x-10 gap-y-4 sm:grid-cols-2">
+          {softSkills.skills.map((skill, index) => (
+            <SkillBar
+              key={skill.name}
+              skill={skill}
+              gradient={softSkills.gradient}
+              index={index}
+            />
+          ))}
+        </div>
+      </article>
+    </section>
+  );
 }

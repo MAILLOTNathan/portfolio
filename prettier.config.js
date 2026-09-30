@@ -1,7 +1,6 @@
 /** @type {import('prettier').Config} */
 module.exports = {
   plugins: ["prettier-plugin-tailwindcss"],
-  // tailwindcss
-  tailwindAttributes: ["theme"],
-  tailwindFunctions: ["twMerge", "createTheme"],
+  // Tailwind utilities passed through these helpers are sorted as well.
+  tailwindFunctions: ["cn", "twMerge"],
 };

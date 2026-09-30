@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "next dev",
     "start": "next dev",
+    "prebuild": "node scripts/check-file-case.mjs",
     "build": "next build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
